@@ -52,33 +52,21 @@ body {
   display: none;
 }
 
-.bayan__radio:nth-of-type(1):checked ~ .bayan__item:nth-of-type(1) .bayan__item-expand-icon svg,
-.bayan__radio:nth-of-type(2):checked ~ .bayan__item:nth-of-type(2) .bayan__item-expand-icon svg,
-.bayan__radio:nth-of-type(3):checked ~ .bayan__item:nth-of-type(3) .bayan__item-expand-icon svg,
-.bayan__radio:nth-of-type(4):checked ~ .bayan__item:nth-of-type(4) .bayan__item-expand-icon svg {
+.bayan__radio:checked + .bayan__item .bayan__item-expand-icon svg {
   transform: rotate(45deg);
 }
 
-.bayan__radio:nth-of-type(1):checked ~ .bayan__item:nth-of-type(1) .bayan__item-content,
-.bayan__radio:nth-of-type(2):checked ~ .bayan__item:nth-of-type(2) .bayan__item-content,
-.bayan__radio:nth-of-type(3):checked ~ .bayan__item:nth-of-type(3) .bayan__item-content,
-.bayan__radio:nth-of-type(4):checked ~ .bayan__item:nth-of-type(4) .bayan__item-content {
+.bayan__radio:checked + .bayan__item .bayan__item-content {
   height: calc(var(--bayan-item-height) + 1rem);
 }
 
-.bayan__radio:nth-of-type(1):checked ~ .bayan__item:nth-of-type(1),
-.bayan__radio:nth-of-type(2):checked ~ .bayan__item:nth-of-type(2),
-.bayan__radio:nth-of-type(3):checked ~ .bayan__item:nth-of-type(3),
-.bayan__radio:nth-of-type(4):checked ~ .bayan__item:nth-of-type(4) {
+.bayan__radio:checked + .bayan__item {
   color: var(--color-primary);
   cursor: default;
   pointer-events: none;
 }
 
-.bayan__radio:nth-of-type(1):checked ~ .bayan__item:nth-of-type(1) .bayan__item-header,
-.bayan__radio:nth-of-type(2):checked ~ .bayan__item:nth-of-type(2) .bayan__item-header,
-.bayan__radio:nth-of-type(3):checked ~ .bayan__item:nth-of-type(3) .bayan__item-header,
-.bayan__radio:nth-of-type(4):checked ~ .bayan__item:nth-of-type(4) .bayan__item-header {
+.bayan__radio:checked + .bayan__item .bayan__item-header {
   color: var(--color-primary);
 }
 
@@ -132,17 +120,11 @@ body {
 }
 
 @media (hover:hover) {
-  .bayan__radio:nth-of-type(1):checked ~ .bayan__item:nth-of-type(1) .bayan__item-header,
-  .bayan__radio:nth-of-type(2):checked ~ .bayan__item:nth-of-type(2) .bayan__item-header,
-  .bayan__radio:nth-of-type(3):checked ~ .bayan__item:nth-of-type(3) .bayan__item-header,
-  .bayan__radio:nth-of-type(4):checked ~ .bayan__item:nth-of-type(4) .bayan__item-header {
+  .bayan__radio:checked + .bayan__item .bayan__item-header {
     color: var(--color-text);
   }
 
-  .bayan:not(:hover) .bayan__radio:nth-of-type(1):checked ~ .bayan__item:nth-of-type(1) .bayan__item-header,
-  .bayan:not(:hover) .bayan__radio:nth-of-type(2):checked ~ .bayan__item:nth-of-type(2) .bayan__item-header,
-  .bayan:not(:hover) .bayan__radio:nth-of-type(3):checked ~ .bayan__item:nth-of-type(3) .bayan__item-header,
-  .bayan:not(:hover) .bayan__radio:nth-of-type(4):checked ~ .bayan__item:nth-of-type(4) .bayan__item-header {
+  .bayan:not(:hover) .bayan__radio:checked + .bayan__item .bayan__item-header {
     color: var(--color-primary);
   }
 
